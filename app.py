@@ -24,7 +24,7 @@ def home():
     if request.method == "POST":
         print(request.form["name"])
         return    
-    return render_template("machine.html")
+    return render_template("machines.html")
 
 @app.route('/test')
 def test():
