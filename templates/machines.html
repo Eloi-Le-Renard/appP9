@@ -3,11 +3,12 @@
     </head>
     <body>
         <h1>Liste d'images à testerrfhrhfrhf</h1>
-               <p>Images : </p>
-               {% for row in liste %}
-                     <p style="padding-left:20px">- {{ row }}</p> 
-                     <a href="{{ row }}">{{ row }}</a> 
-               {% endfor %}
+               <form method="post">
+                 Name: <input name="name"/>
+                 <button type="submit">Submit</button>
+               </form>
     </body>
 </html>
+
+
 
