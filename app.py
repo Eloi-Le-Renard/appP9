@@ -23,8 +23,8 @@ app = Flask(__name__)
 def home():
     if request.method == "POST":
         print("eeefgrrf")
-        #print(request.form["name"])
-        return    
+        var = request.form["name"]
+        return render_template("machines.html", contenu=[var])
     return render_template("machines.html")
 
 @app.route('/test')
