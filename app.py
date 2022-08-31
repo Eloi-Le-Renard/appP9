@@ -23,9 +23,8 @@ app = Flask(__name__)
 def home():
     if request.method == "POST":
         print(request.form["name"])
-        print(request.form["email"])
         return    
-    return render_template("home.html")
+    return render_template("machine.html")
 
 @app.route('/test')
 def test():
