@@ -22,7 +22,8 @@ app = Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def home():
     if request.method == "POST":
-        print("eeefgrrf")
+        # call azure f.
+        
         var = request.form["name"]
         return render_template("machines.html", contenu=[var])
     return render_template("machines.html")
