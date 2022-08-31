@@ -7,6 +7,10 @@
                  Name: <input name="name"/>
                  <button type="submit">Submit</button>
                </form>
+        <h1>Reco :</h1>
+          {% for row in contenu %}
+                <p style="padding-left:20px">- {{ row }} </p> 
+          {% endfor %}
     </body>
 </html>
 
