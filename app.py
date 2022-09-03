@@ -1,11 +1,7 @@
 #!/usr/bin/python
-import json
 import os
-from tensorflow.keras.preprocessing.image import load_img
 import numpy as np
-from skimage.io import imsave
-from tensorflow.keras import backend as K
-from tensorflow.keras.models import load_model
+
 
 
 # ==============================
@@ -23,8 +19,15 @@ app = Flask(__name__)
 def home():
     if request.method == "POST":
         # call azure f.
+        url = "https://functionp9.azurewebsites.net/api/httptrigger2"
+        #x = requests.get(url+"?name=12")
+        x = requests.get(url)
+        jsonString = json.dumps(x.json())
+        var = jsonString
         
-        var = request.form["name"]
+        # methode post input id client
+        #var = request.form["name"]
+        
         return render_template("machines.html", contenu=[var])
     return render_template("machines.html")
 
