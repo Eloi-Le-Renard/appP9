@@ -21,8 +21,10 @@ def home():
         # call azure f.
         #url = "https://functionp9.azurewebsites.net/api/httptrigger2"
         url = "https://nom-aplip9.azurewebsites.net/api/httptrigger2"
+        params = {'userID': '5'}
+        x = requests.post(url, params=params)
         #x = requests.get(url+"?name=12")
-        x = requests.get(url)
+        ##x = requests.get(url)
         jsonString = json.dumps(x.json())
         var = jsonString
         
