@@ -25,8 +25,8 @@ def home():
         x = requests.post(url, params=params)
         #x = requests.get(url+"?name=12")
         ##x = requests.get(url)
-        jsonString = json.dumps(x.json())
-        var = jsonString
+        ##jsonString = json.dumps(x.json())
+        var = x.text
         
         # methode post input id client
         #var = request.form["name"]
