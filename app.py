@@ -18,10 +18,11 @@ app = Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def home():
     if request.method == "POST":
+        user_id = request.form['user_id']
         # call azure f.
         #url = "https://functionp9.azurewebsites.net/api/httptrigger2"
         url = "https://nom-aplip9.azurewebsites.net/api/HttpTrigger2?code=Bon37HsVudCSsACK7XjHCHNEp2oUQ2Gg_Awi5hH3rr5TAzFuGkmn8w=="
-        params = {'userID': '5'}
+        params = {'userID': str(user_id)}
         x = requests.post(url, params=params)
         #x = requests.get(url+"?name=12")
         ##x = requests.get(url)
