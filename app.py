@@ -20,7 +20,7 @@ def home():
     if request.method == "POST":
         # call azure f.
         #url = "https://functionp9.azurewebsites.net/api/httptrigger2"
-        url = "https://nom-aplip9.azurewebsites.net/api/httptrigger2"
+        url = "https://nom-aplip9.azurewebsites.net/api/HttpTrigger2?code=Bon37HsVudCSsACK7XjHCHNEp2oUQ2Gg_Awi5hH3rr5TAzFuGkmn8w=="
         params = {'userID': '5'}
         x = requests.post(url, params=params)
         #x = requests.get(url+"?name=12")
