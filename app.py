@@ -19,7 +19,8 @@ app = Flask(__name__)
 def home():
     if request.method == "POST":
         # call azure f.
-        url = "https://functionp9.azurewebsites.net/api/httptrigger2"
+        #url = "https://functionp9.azurewebsites.net/api/httptrigger2"
+        url = "https://nom-aplip9.azurewebsites.net/api/httptrigger2"
         #x = requests.get(url+"?name=12")
         x = requests.get(url)
         jsonString = json.dumps(x.json())
