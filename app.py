@@ -20,7 +20,7 @@ def home():
     if request.method == "POST":
         user_id = request.form['user_id']
         # call azure f.
-        url = "https://p9appf.azurewebsites.net/api/HttpTrigger1?"
+        url = "https://funappp9.azurewebsites.net/api/HttpTrigger1?"
         params = {'userID': str(user_id)}
         x = requests.post(url, params=params)
         var = x.text
